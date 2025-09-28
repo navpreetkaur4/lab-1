@@ -9,7 +9,6 @@ interface Department {
 const EmployeePage: React.FC = () => {
   const [search, setSearch] = useState("");
 
-  // Filter employees by name or department (real-time)
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
     if (!q) return departmentsData as Department[];
@@ -18,7 +17,6 @@ const EmployeePage: React.FC = () => {
       const matched = dep.employees.filter(name =>
         name.toLowerCase().includes(q)
       );
-      // also include if department name matches search
       if (dep.department.toLowerCase().includes(q) && matched.length === 0) {
         return { ...dep, employees: dep.employees };
       }

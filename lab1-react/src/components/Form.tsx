@@ -11,23 +11,18 @@ export default function Form({ data, setData }: FormProps) {
   const [dept, setDept] = useState(Object.keys(data)[0] || "");
   const [error, setError] = useState("");
 
-  // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Validation: name must be at least 3 characters
     if (name.trim().length < 3) {
       setError("Name must be at least 3 characters long.");
       return;
     }
-
-    // Add new employee to state
     setData((prev) => ({
       ...prev,
       [dept]: [...prev[dept], name.trim()],
     }));
 
-    // Reset form
     setName("");
     setError("");
   };
