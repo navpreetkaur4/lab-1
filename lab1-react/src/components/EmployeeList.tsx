@@ -1,22 +1,29 @@
-import employees from "../data/employees.json";
-import type { EmployeeData } from "../types";
+import React from "react";
 
-export default function EmployeeList() {
-  const data: EmployeeData = employees;
+interface EmployeeData {
+  department: string;
+  employees: string[];
+}
 
+interface EmployeeListProps {
+  data: EmployeeData[]; 
+}
+
+const EmployeeList: React.FC<EmployeeListProps> = ({ data }) => {
   return (
-    <main className="p-6">
-      <h2>Employee Directory</h2>
-      {Object.entries(data).map(([dept, names]) => (
-        <section key={dept} className="border p-2 my-2">
-          <h4>{dept}</h4>
+    <div>
+      {data.map((dept, i) => (
+        <div key={i}>
+          <h3>{dept.department}</h3>
           <ul>
-            {names.map((name) => (
-              <li key={name}>{name}</li>
+            {dept.employees.map((emp, j) => (
+              <li key={j}>{emp}</li>
             ))}
           </ul>
-        </section>
+        </div>
       ))}
-    </main>
+    </div>
   );
-}
+};
+
+export default EmployeeList;
