@@ -1,11 +1,21 @@
-export default function NavBar() {
+import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../assets/react.svg";
+
+const Navbar: React.FC = () => {
   return (
-    <nav className="flex justify-between p-4 bg-blue-900 text-white">
-      <img src="/logo.png" alt="Logo" className="h-8" />
-      <ul className="flex gap-4">
-        <li><a href="#">Employees</a></li>
-        <li><a href="#">Organization</a></li>
-      </ul>
-    </nav>
+    <header className="navbar">
+      <div className="nav-left">
+        <img src={logo} alt="Logo" style={{width: 48, height: 48}} />
+      </div>
+      <nav className="nav-links">
+        <ul>
+          <li><Link to="/employees">Employees</Link></li>
+          <li><Link to="/organization">Organization</Link></li>
+        </ul>
+      </nav>
+    </header>
   );
-}
+};
+
+export default Navbar;

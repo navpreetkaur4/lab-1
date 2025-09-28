@@ -1,5 +1,14 @@
-{
-  "Technology": ["Alice Smith", "Bob Johnson", "Carol Davis"],
-  "Finance": ["David Wilson", "Evelyn Brown"],
-  "HR": ["Frank White", "Grace Hall"]
-}
+[
+  {
+    "department": "Finance",
+    "employees": ["Alice Smith", "Bob Johnson"]
+  },
+  {
+    "department": "IT",
+    "employees": ["Charlie Brown", "Dana White"]
+  },
+  {
+    "department": "HR",
+    "employees": ["Eve Adams"]
+  }
+]

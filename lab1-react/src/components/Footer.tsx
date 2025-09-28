@@ -1,7 +1,11 @@
-export default function Footer() {
+import React from "react";
+
+const Footer: React.FC = () => {
   return (
-    <footer className="text-center p-4 bg-gray-200">
-      <p>Copyright Pixell River Financial {new Date().getFullYear()}</p>
+    <footer style={{ padding: "1rem" }}>
+      <small>Copyright Pixell River Financial {new Date().getFullYear()}</small>
     </footer>
   );
-}
+};
+
+export default Footer;

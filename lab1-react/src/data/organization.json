@@ -1,0 +1,17 @@
+[
+  {
+    "title": "CEO",
+    "name": "Jordan Fletcher",
+    "description": "CEO: responsible for overall strategy... (replace with case study text)"
+  },
+  {
+    "title": "CTO",
+    "name": "Morgan Lee",
+    "description": "CTO: responsible for technology strategy..."
+  },
+  {
+    "title": "CFO",
+    "name": "Riley Singh",
+    "description": "CFO: responsible for financial oversight..."
+  }
+]
